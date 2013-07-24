@@ -56,3 +56,18 @@ footer ul li {
   float: left;
   margin-left: 10px;
 }
+
+#front-signin{
+  background: #fff;
+  border-left: solid 1px #eee;
+  border-right: solid 1px #eee;
+  border-bottom: solid 1px #ccc;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 0 rgba(0,0,0,.1);
+  position: absolute;
+  top: 100px;
+  right:0;
+  width: 250px;
+  height: 150px;
+
+}
