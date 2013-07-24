@@ -1,12 +1,14 @@
 <footer class="footer">
   <small>
-    <li><%= link_to "Home",    '#' %></li>
+    <%= link_to "Home", root_path, :class => 'brand' %>
+    © Copyright 2013. All rights reserved.
   </small>
+  
   <nav>
     <ul>
-      <li><%= link_to "About",   '#' %></li>
-      <li><%= link_to "Contact", '#' %></li>
-      <li><a href="#">@application 2013</a></li>
+      <li><%= link_to "About",   about_path %></li>
+      <li><%= link_to "Contact", contact_path %></li>
+      <li><%= link_to "Help & support", help_path %></li>
     </ul>
   </nav>
 </footer>

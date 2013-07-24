@@ -1,14 +1,24 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "application", '#', id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "Home",    '#' %></li>
-          <li><%= link_to "Help",    '#' %></li>
-          <li><%= link_to "Sign in", '#' %></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+
+
+<header class="navbar navbar-fixed-top ">
+  <nav class="navbar-inner">    
+      <ul>
+        <% if user_signed_in? %>
+          <%= link_to "Application", users_path, :class => 'brand' %>
+
+          <div  class="nav pull-right">
+            <li><%= link_to 'Edit account', edit_user_registration_path %></li>
+            <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
+          </div>
+          
+        <%else%>
+          <%= link_to "Home", root_path, :class => 'brand' %>
+          <div class="nav pull-right">
+            <li><%= link_to 'Sign up', new_user_registration_path %></li>
+            <li><%= link_to "Help & support", help_path %></li>
+            <li><%= link_to 'Login', new_user_session_path %></li>
+          </div>
+        <% end %>
+      </ul>
+  </nav>
 </header>
